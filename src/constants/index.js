@@ -23,6 +23,10 @@ import {
   jobit,
   tripguide,
   threejs,
+  CS,
+  DotNet,
+  Next,
+  Postgre,
 } from "../assets";
 
 export const navLinks = [
@@ -54,7 +58,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Software Engineering",
     icon: creator,
   },
 ];
@@ -77,6 +81,10 @@ const technologies = [
     icon: typescript,
   },
   {
+    name: "CS",
+    icon: CS,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
@@ -93,6 +101,18 @@ const technologies = [
     icon: nodejs,
   },
   {
+    name: "Next",
+    icon: Next,
+  },
+  {
+    name: "DotNet",
+    icon: DotNet,
+  },
+  {
+    name: "Postgre",
+    icon: Postgre,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
@@ -100,14 +120,12 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
+
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
+
   {
     name: "docker",
     icon: docker,
@@ -117,7 +135,7 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
+    company_name: "Lorem",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
@@ -130,7 +148,7 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
+    company_name: "Lorem",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
@@ -143,7 +161,7 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
+    company_name: "Lorem",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
@@ -156,7 +174,7 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
+    company_name: "Lorem",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",

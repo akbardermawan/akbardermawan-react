@@ -20,6 +20,10 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import CS from "./tech/CS.svg";
+import DotNet from "./tech/DotNet.svg";
+import Next from "./tech/Next.svg";
+import Postgre from "./tech/Postgre.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -59,4 +63,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  CS,
+  DotNet,
+  Next,
+  Postgre,
 };
