@@ -216,68 +216,62 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    id: 1,
+    title: "React Commerce",
+    img: "https://images.unsplash.com/photo-1747069334505-cf6815248cfe?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
+    url: "",
+    code: "",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    id: 2,
+    title: "React Library",
+    img: "https://images.unsplash.com/photo-1726607288637-a646ddd3814a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
+    url: "",
+    code: "",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    id: 3,
+    title: "React Pamvlet",
+    img: "https://plus.unsplash.com/premium_photo-1747290111576-07d2f5034ae1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
+    url: "",
+    code: "",
+  },
+  {
+    id: 4,
+    title: "React Boxing Hotel",
+    img: "https://images.unsplash.com/photo-1726137570619-4e6b55c17c51?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
+    url: "",
+    code: "",
+  },
+];
+const blog = [
+  {
+    title: "Blog1",
+    creatAt: "15 May 2025",
+    image: "/portfolio.JPG",
+    url: "https://akbardermawan.github.io/",
+    code: "https://github.com/akbardermawan/akbardermawan.github.io",
+  },
+  {
+    title: "Blog2",
+    creatAt: "16 May 2025",
+    image:
+      "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
+    url: "....",
+    code: "...",
+  },
+  {
+    title: "Blog3",
+    creatAt: "16 May 2025",
+    image:
+      "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
+    url: "....",
+    code: "...",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, blog };

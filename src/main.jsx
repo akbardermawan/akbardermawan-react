@@ -14,7 +14,7 @@ import { createBrowserRouter } from "react-router";
 //pages
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-import Resume from "./pages/Resume.jsx";
+
 import Blog from "./pages/Blog.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/resume" element={<Resume />} />
+
       <Route path="/blog" element={<Blog />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/contact" element={<Contact />} />

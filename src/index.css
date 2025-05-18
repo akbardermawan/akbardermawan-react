@@ -199,3 +199,44 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* Animasi float */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animasi spin miring */
+@keyframes spinTilted {
+  from {
+    transform: rotateX(70deg) rotate(0deg);
+  }
+  to {
+    transform: rotateX(70deg) rotate(360deg);
+  }
+}
+
+/* Utility kustom (opsional) jika kamu pakai @layer */
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  .animate-spin-tilted {
+    animation: spinTilted 5s linear infinite;
+  }
+}
+
+/* src/index.css */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

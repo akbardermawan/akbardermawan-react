@@ -6,7 +6,7 @@ const Navigation = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-black/30 backdrop-blur-md fixed w-full z-10 shadow-md">
+    <nav className="bg-black/30 backdrop-blur-md fixed w-full z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-4 ">
         <div className="flex justify-between h-16">
           <div className="flex items-center ">

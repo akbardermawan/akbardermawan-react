@@ -1,4 +1,7 @@
 import React from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Footer = () => {
   return (
@@ -13,23 +16,26 @@ const Footer = () => {
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
+            className="hover:text-blue-400 transition flex"
           >
-            GitHub
+            <GitHubIcon />
+            <p className="hidden md:flex md:ml-1">Github</p>
           </a>
           <a
             href="https://linkedin.com/in/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
+            className="hover:text-blue-400 transition flex"
           >
-            LinkedIn
+            <LinkedInIcon />
+            <p className="hidden md:flex md:ml-1">LinkedIn</p>
           </a>
           <a
             href="mailto:youremail@example.com"
-            className="hover:text-blue-400 transition"
+            className="hover:text-blue-400 transition flex"
           >
-            Email
+            <EmailIcon />
+            <p className="hidden md:flex md:ml-1">Email</p>
           </a>
         </div>
       </div>
