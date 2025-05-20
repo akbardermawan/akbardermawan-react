@@ -8,10 +8,10 @@ const Resume = () => {
         href="/files/CV_Akbar.pdf"
         download
         aria-label="Download Resume"
-        className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center bg-blue-600 hover:bg-blue-300  rounded-full shadow-lg transition duration-300"
+        className="w-12  h-12  flex items-center justify-center bg-blue-600 hover:bg-blue-300  rounded-full shadow-lg transition duration-300"
       >
         <DescriptionIcon
-          sx={{ width: { xs: 36, md: 56 }, height: { xs: 36, md: 56 } }}
+          sx={{ width: { xs: 36 }, height: { xs: 36 } }}
           className="text-white hover:text-black"
         />
       </a>
