@@ -21,8 +21,8 @@ const Portfolio = () => {
     <div className="h-screen w-full flex flex-col bg-white  relative">
       {/* Header */}
       <header className="w-full absolute top-0 z-10 bg-black/0 pt-17  text-center">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-black to-blue-400 bg-clip-text text-transparent bg-[length:100%_300%] pb-2">
-          Portfolio
+        <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl">
+          <span className="font-extrabold text-blue-600">Portfolio</span>
         </h1>
 
         {/* Center-shrinking progress bar */}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,21 +38,33 @@ const Navigation = () => {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-black/30 backdrop-blur-md shadow-md">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {["HOME", "ABOUT", , "BLOG", "PORTFOLIO", "CONTACT"].map((item) => (
-              <a
-                key={item}
-                href={`/${item === "HOME" ? "" : item.toLowerCase()}`}
-                className="block px-3 py-2 text-gray-100 hover:bg-gray-950"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute top-0 left-0 right-0 bg-black/50 backdrop-blur-md shadow-md"
+          >
+            <div className="px-4 pt-4 pb-6 space-y-3">
+              {["HOME", "ABOUT", , "BLOG", "PORTFOLIO", "CONTACT"].map(
+                (item) => (
+                  <motion.a
+                    key={item}
+                    href={`/${item === "HOME" ? "" : item.toLowerCase()}`}
+                    className="block px-4 py-2 text-gray-100 rounded hover:bg-gray-800"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {item}
+                  </motion.a>
+                )
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

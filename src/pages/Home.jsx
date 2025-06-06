@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "../components/canvas";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (

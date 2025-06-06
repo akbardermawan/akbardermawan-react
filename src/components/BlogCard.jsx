@@ -1,26 +1,30 @@
 import React from "react";
-import CodeIcon from "@mui/icons-material/Code";
-import WebIcon from "@mui/icons-material/Web";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({ b }) => {
   return (
-    <div className=" w-[320px] md:w-[300px] h-[200px] mx-auto bg-white shadow-lg rounded-2xl overflow-hidden relative m-1 md:2">
-      <img className="w-full  object-cover" src={b.image} alt="Card Image" />
-      <div className="absolute inset-0 md:bg-black/70 md:hover:bg-black/0 flex flex-col justify-end p-4 transition duration-500 ease-in-out text-blue-600 hover:text-blue-400">
-        <div className="flex justify-between items-center">
-          <h2 className="text-xl font-semibold text-white mb-2">
-            {b?.title || "Judul Card"}
-          </h2>
-          <p className="text-sm text-blue-200 hidden md:flex">{b.creatAt}</p>
-        </div>
-        <div className="flex space-x-2 ">
-          <a href={b.code} className="">
-            <CodeIcon />
-          </a>
-          <a href={b.url} className="ml-1">
-            <WebIcon />
-          </a>
-        </div>
+    <div className=" rounded-lg shadow-md overflow-hidden flex flex-col">
+      {/* Gambar */}
+      <img
+        src={b.image}
+        alt={b?.title || "Blog Image"}
+        className="w-full h-48 lg:h-56 object-cover"
+      />
+
+      {/* Konten */}
+      <div className="p-4 flex flex-col gap-2">
+        <h2 className="text-lg font-semibold text-gray-800">
+          {b?.title || "Untitled Blog"}
+        </h2>
+        <p className="text-sm text-gray-500">{b?.creatAt}</p>
+        <Link
+          to={b.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline text-sm"
+        >
+          Read Article &rarr;
+        </Link>
       </div>
     </div>
   );

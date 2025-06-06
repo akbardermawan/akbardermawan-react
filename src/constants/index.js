@@ -250,7 +250,7 @@ const projects = [
 ];
 const blog = [
   {
-    title: "Blog1",
+    title: "My Portfolio",
     creatAt: "15 May 2025",
     image: "/portfolio.JPG",
     url: "https://akbardermawan.github.io/",
@@ -261,11 +261,35 @@ const blog = [
     creatAt: "16 May 2025",
     image:
       "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
-    url: "....",
+    url: "https://cpns-banksoal.vercel.app/",
     code: "...",
   },
   {
     title: "Blog3",
+    creatAt: "16 May 2025",
+    image:
+      "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
+    url: "....",
+    code: "...",
+  },
+  {
+    title: "Blog4",
+    creatAt: "16 May 2025",
+    image:
+      "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
+    url: "....",
+    code: "...",
+  },
+  {
+    title: "Blog5",
+    creatAt: "16 May 2025",
+    image:
+      "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
+    url: "....",
+    code: "...",
+  },
+  {
+    title: "Blog6",
     creatAt: "16 May 2025",
     image:
       "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
