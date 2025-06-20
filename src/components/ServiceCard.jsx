@@ -1,8 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ServiceCard = ({ key, index, service }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.8, delay: index * 0.2 }}
+      className="bg-white rounded-lg shadow-md p-4 mb-4"
+    >
       <div className="flex items-center justify-between border-b pb-4">
         <div className="flex items-center gap-4">
           <img
@@ -15,7 +23,7 @@ const ServiceCard = ({ key, index, service }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

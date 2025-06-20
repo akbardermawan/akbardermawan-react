@@ -1,6 +1,6 @@
 import { div } from "framer-motion/client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { services } from "../constants/index";
 import ServiceCard from "../components/ServiceCard";
@@ -12,11 +12,21 @@ import TypeWriter from "../components/TypeWriter";
 import { personalInfo } from "../constants/data";
 import { FiDownload } from "react-icons/fi";
 import InfiniteScroll from "../components/InfiniteScroll";
+import CoverAbout from "../components/CoverAbout";
+import IntroductionVidio from "../components/IntroductionVidio";
 
 const About = () => {
+  const { scrollY } = useScroll();
+
+  // Saat scrollY > 500px, turunkan z-index agar tidak menutupi konten
+  const zIndex = useTransform(scrollY, [0, 500], [30, -10]);
   return (
-    <div>
-      <div className="fixed bottom-12 right-8 z-[1000] flex "></div>
+    <div className="relative">
+      {/* Bagian Sticky Cover */}
+      <motion.div style={{ zIndex }} className="sticky top-0 w-full h-screen">
+        <CoverAbout />
+      </motion.div>
+
       <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-100">
         <div className="relative h-[350px] md:h-[450px] lg:h-[550px] w-full overflow-hidden">
           <img
@@ -54,7 +64,11 @@ const About = () => {
               {personalInfo.map((p, i) => (
                 <div key={i} className="text-left text-sm  lg:text-xl">
                   {p.title}{" "}
-                  <span className="font-bold text-blue-500">
+                  <span
+                    className={`text-blue-500 md:text-sm ${
+                      p.id === 8 ? "font-thin text-xs" : "font-semibold"
+                    }`}
+                  >
                     {p.description}
                   </span>
                 </div>
@@ -80,7 +94,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
         <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5">
           <h3 className="text-xl text-gray-700">SKILLS</h3>
 
@@ -105,6 +118,9 @@ const About = () => {
           <div className="mt-5 hidden md:flex">
             <Technologies />
           </div>
+        </div>
+        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5">
+          <IntroductionVidio />
         </div>
         <div className=" max-w-7xl mx-auto mt-15 mb-15 lg:mb-20  px-8">
           <h3 className="text-2xl font-bold text-black">QUOTES</h3>
