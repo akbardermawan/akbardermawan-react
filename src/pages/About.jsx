@@ -14,6 +14,7 @@ import { FiDownload } from "react-icons/fi";
 import InfiniteScroll from "../components/InfiniteScroll";
 import CoverAbout from "../components/CoverAbout";
 import IntroductionVidio from "../components/IntroductionVidio";
+import SingleCard from "../components/SingleCard";
 
 const About = () => {
   const { scrollY } = useScroll();
@@ -23,11 +24,11 @@ const About = () => {
   return (
     <div className="relative">
       {/* Bagian Sticky Cover */}
-      <motion.div style={{ zIndex }} className="sticky top-0 w-full h-screen">
+      <motion.div style={{ zIndex }} className="sticky top-0 w-full h-[50vh]">
         <CoverAbout />
       </motion.div>
 
-      <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-100">
+      <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-200">
         <div className="relative h-[350px] md:h-[450px] lg:h-[550px] w-full overflow-hidden">
           <img
             src="/about.jpg"
@@ -94,19 +95,26 @@ const About = () => {
             </div>
           </div>
         </div>
+
         <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5">
           <h3 className="text-xl text-gray-700">SKILLS</h3>
 
-          <span className="text-2xl text-black">WHAT I CAN DO</span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <ServiceCard key={index} index={index} service={service} />
-            ))}
+          <span className="text-2xl text-black mb-5">WHAT I CAN DO</span>
+          <div className="flex flex-col md:flex-row">
+            <div className="w-[100%] md:w-[50%] p-1 flex items-center justify-center">
+              <SingleCard />
+            </div>
+            <div className="w-[100%] md:w-[50%] grid grid-cols-1  gap-6 px-2 pt-2 md:pt-0">
+              {services.map((service, index) => (
+                <ServiceCard key={index} index={index} service={service} />
+              ))}
+            </div>
           </div>
           <div className="mt-2">
             <InfiniteScroll />
           </div>
         </div>
+
         <div className=" max-w-7xl mx-auto mt-12 mb-15 lg:mb-20  ">
           <div className="px-8">
             <h3 className="text-xl text-black">Experiences</h3>
@@ -119,6 +127,7 @@ const About = () => {
             <Technologies />
           </div>
         </div>
+
         <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5">
           <IntroductionVidio />
         </div>

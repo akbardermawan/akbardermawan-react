@@ -9,7 +9,7 @@ const CoverAbout = () => {
   const bottomY = useTransform(scrollYProgress, [0, 0.3], [0, 300]);
 
   // Fade out background container (bukan teks)
-  const fadeOut = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const fadeOut = useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden ">

@@ -48,19 +48,17 @@ const Navigation = () => {
             className="md:hidden absolute top-0 left-0 right-0 bg-black/50 backdrop-blur-md shadow-md"
           >
             <div className="px-4 pt-4 pb-6 space-y-3">
-              {["HOME", "ABOUT", , "BLOG", "PORTFOLIO", "CONTACT"].map(
-                (item) => (
-                  <motion.a
-                    key={item}
-                    href={`/${item === "HOME" ? "" : item.toLowerCase()}`}
-                    className="block px-4 py-2 text-gray-100 rounded hover:bg-gray-800"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {item}
-                  </motion.a>
-                )
-              )}
+              {["HOME", "ABOUT", "BLOG", "PORTFOLIO", "CONTACT"].map((item) => (
+                <motion.a
+                  key={item}
+                  href={`/${item === "HOME" ? "" : item.toLowerCase()}`}
+                  className="block px-4 py-2 text-gray-100 rounded hover:bg-gray-800"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {item}
+                </motion.a>
+              ))}
             </div>
           </motion.div>
         )}

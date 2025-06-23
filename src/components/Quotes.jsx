@@ -3,24 +3,28 @@ import Slider from "react-slick";
 
 const quotes = [
   {
-    text: "The only limit to our realization of tomorrow is our doubts of today.",
-    author: "Franklin D. Roosevelt",
+    text: "Bring God into your life, and everything will be just fine",
+    author: "Anonymus",
   },
   {
-    text: "Life is what happens when you're busy making other plans.",
-    author: "John Lennon",
+    text: "Hargailah orang lain jika kamu ingin dihargai",
+    author: "Anonymous",
   },
   {
-    text: "Do not watch the clock. Do what it does. Keep going.",
-    author: "Sam Levenson",
+    text: "Don't be afraid to start creating, even if your work isn't great.",
+    author: "Anonymous",
   },
   {
-    text: "Keep your face always toward the sunshine—and shadows will fall behind you.",
-    author: "Walt Whitman",
+    text: "Meskipun belajar merupakan sesuatu yang pahit tapi yakinlah itu akan berbuah manis",
+    author: "Anonymous",
   },
   {
-    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-    author: "Winston Churchill",
+    text: "Kalimat motifasi adalah sampah yang kamu perlukan adalah disiplin dan pantang menyerah",
+    author: "Anonymus",
+  },
+  {
+    text: "Jangan hidup seperti lilin, tapi hiduplah seperti Lampu",
+    author: "Anonymus",
   },
 ];
 

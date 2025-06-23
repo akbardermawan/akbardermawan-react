@@ -46,13 +46,10 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Developer",
     icon: web,
   },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
+
   {
     title: "Backend Developer",
     icon: backend,
@@ -257,11 +254,11 @@ const blog = [
     code: "https://github.com/akbardermawan/akbardermawan.github.io",
   },
   {
-    title: "Blog2",
+    title: "Indonesia 2035",
     creatAt: "16 May 2025",
     image:
-      "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&w=1500&dpr=2",
-    url: "https://cpns-banksoal.vercel.app/",
+      "https://images.unsplash.com/photo-1602183081720-3ff0403e87d5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://indonesia-82pbcknbo-akbardermawans-projects.vercel.app/",
     code: "...",
   },
   {

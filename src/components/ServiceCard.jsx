@@ -19,7 +19,9 @@ const ServiceCard = ({ key, index, service }) => {
             className="w-16 h-16 rounded object-cover"
           />
           <div>
-            <h4 className="font-semibold text-lg">{service.title}</h4>
+            <h4 className="font-semibold text-lg text-blue-700">
+              {service.title}
+            </h4>
           </div>
         </div>
       </div>
