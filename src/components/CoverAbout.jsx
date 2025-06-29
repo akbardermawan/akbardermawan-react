@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import CoverAboutGlitch from "./CoverAboutGlitch";
 
 const CoverAbout = () => {
   const { scrollYProgress } = useScroll();
@@ -16,11 +17,17 @@ const CoverAbout = () => {
       {/* Bagian atas ADM */}
       <motion.div
         style={{ y: topY, opacity: fadeOut }}
-        className="absolute top-0 left-0 w-full h-1/2 overflow-hidden flex justify-center items-end bg-black"
+        className=" absolute top-0 left-0 w-full h-1/2 overflow-hidden flex justify-center items-end bg-black"
       >
-        <h1 className="text-white text-[120px] font-black leading-none translate-y-1/2">
+        {/* contain */}
+        <CoverAboutGlitch
+          speed={1}
+          enableShadows={true}
+          enableOnHover={true}
+          className="custom-class font-black leading-none translate-y-1/2 "
+        >
           ADM
-        </h1>
+        </CoverAboutGlitch>
       </motion.div>
 
       {/* Bagian bawah ADM */}
@@ -28,9 +35,14 @@ const CoverAbout = () => {
         style={{ y: bottomY, opacity: fadeOut }}
         className="absolute bottom-0 left-0 w-full h-1/2 overflow-hidden flex justify-center items-start bg-black"
       >
-        <h1 className="text-white text-[120px] font-black leading-none  -translate-y-1/2">
+        <CoverAboutGlitch
+          speed={1}
+          enableShadows={true}
+          enableOnHover={true}
+          className="custom-class font-black leading-none -translate-y-1/2 "
+        >
           ADM
-        </h1>
+        </CoverAboutGlitch>
       </motion.div>
     </div>
   );

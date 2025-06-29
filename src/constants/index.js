@@ -48,15 +48,17 @@ const services = [
   {
     title: "Frontend Developer",
     icon: web,
+    skill: ["React JS", "Tailwind CSS", "Blazor"],
   },
-
   {
     title: "Backend Developer",
     icon: backend,
+    skill: ["Node JS", "Next Js", "ASP.Net Core"],
   },
   {
-    title: "Software Engineering",
+    title: "Software Engineer",
     icon: creator,
+    skill: ["Postgre SQL", "Mongo DB", "GitHub"],
   },
 ];
 

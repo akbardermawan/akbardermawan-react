@@ -12,11 +12,11 @@ const Single = ({ item }) => {
   return (
     <section
       ref={ref}
-      className="min-h-screen flex items-center justify-center snap-start px-4 md:px-8"
+      className="min-h-screen flex items-center justify-center snap-start px-4 md:px-8 md:pt-9"
     >
       <div className="w-full h-full max-w-7xl flex flex-col md:flex-row items-center gap-5 overflow-hidden">
         {/* Gambar */}
-        <div className="w-full md:w-1/2 h-64 md:h-[360px] xl:h-[450px] lg:mr-10">
+        <div className="w-full md:w-1/2 h-64 md:h-[50%] pt-10 lg:mr-10">
           <img
             src={item.img}
             alt="image"

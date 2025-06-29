@@ -15,6 +15,7 @@ import InfiniteScroll from "../components/InfiniteScroll";
 import CoverAbout from "../components/CoverAbout";
 import IntroductionVidio from "../components/IntroductionVidio";
 import SingleCard from "../components/SingleCard";
+import CanvasCursor from "../components/CanvasCursor";
 
 const About = () => {
   const { scrollY } = useScroll();
@@ -23,6 +24,7 @@ const About = () => {
   const zIndex = useTransform(scrollY, [0, 500], [30, -10]);
   return (
     <div className="relative">
+      <CanvasCursor />
       {/* Bagian Sticky Cover */}
       <motion.div style={{ zIndex }} className="sticky top-0 w-full h-[50vh]">
         <CoverAbout />
