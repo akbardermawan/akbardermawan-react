@@ -58,7 +58,7 @@ const services = [
   {
     title: "Software Engineer",
     icon: creator,
-    skill: ["Postgre SQL", "Mongo DB", "GitHub"],
+    skill: ["Postgre SQL", "Mongo DB", "GitHub", "Docker"],
   },
 ];
 

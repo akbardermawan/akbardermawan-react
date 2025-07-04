@@ -1,5 +1,3 @@
-import { div } from "framer-motion/client";
-import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { services } from "../constants/index";
@@ -16,6 +14,8 @@ import CoverAbout from "../components/CoverAbout";
 import IntroductionVidio from "../components/IntroductionVidio";
 import SingleCard from "../components/SingleCard";
 import CanvasCursor from "../components/CanvasCursor";
+import FlowChart from "../components/FlowChart";
+import LanyardCanvas from "./../components/Lanyard/LanyardCanvas";
 
 const About = () => {
   const { scrollY } = useScroll();
@@ -42,17 +42,13 @@ const About = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-12 mb-15 lg:mb-20  flex flex-col md:flex-row items-center md:items-center justify-center gap-6 px-4">
-          <div className="w-full md:w-[40%] flex justify-center items-center">
-            <div className="w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] h-[240px] md:h-[300px] lg:h-[350px] xl:h-[400px] rounded-4xl md:rounded-full overflow-hidden shadow-lg">
-              <img
-                src="/pf.jpg"
-                alt="profile"
-                className="w-full h-full object-cover object-center grayscale-0 md:grayscale md:hover:grayscale-0 "
-              />
+        <div className="max-w-7xl mx-auto mt-1 mb-15 lg:mb-20  flex flex-col md:flex-row items-center md:items-center justify-center gap-6 px-4">
+          <div className="w-full md:w-[45%] h-[320px] flex justify-center items-center">
+            <div className="relative -top-40">
+              <LanyardCanvas />
             </div>
           </div>
-          <div className="w-full md:w-[60%] text-center md:text-left xl:pt-8 md:pr-2">
+          <div className="w-full md:w-[55%] text-center md:text-left xl:pt-8 md:pr-2">
             <div>
               <TypeWriter
                 text="Akbar Dermawan Mahbubillah"
@@ -98,7 +94,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5">
+        {/* skill */}
+        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 md:mt10">
           <h3 className="text-xl text-gray-700">SKILLS</h3>
 
           <span className="text-2xl text-black mb-5">WHAT I CAN DO</span>
@@ -117,20 +114,18 @@ const About = () => {
           </div>
         </div>
 
-        <div className=" max-w-7xl mx-auto mt-12 mb-15 lg:mb-20  ">
-          <div className="px-8">
-            <h3 className="text-xl text-black">Experiences</h3>
-          </div>
-
+        {/* experience */}
+        <div className="w-full ">
           <div>
             <Experiences />
           </div>
-          <div className="mt-5 hidden md:flex">
-            <Technologies />
+          <div className="relativ z-10">
+            <FlowChart />
           </div>
         </div>
 
-        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5">
+        {/* Introduction vidio  */}
+        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 mt-5 md:mt-10 lg:mt-20">
           <IntroductionVidio />
         </div>
         <div className=" max-w-7xl mx-auto mt-15 mb-15 lg:mb-20  px-8">
@@ -140,6 +135,10 @@ const About = () => {
             <Quotes />
           </div>
         </div>
+        <div className=" max-w-7xl mx-auto  mb-15 lg:mb-20  ">
+          <div className="mt-5 hidden md:flex">{/* <Technologies /> */}</div>
+        </div>
+
         <div>
           <Footer />
         </div>

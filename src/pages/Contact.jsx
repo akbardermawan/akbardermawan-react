@@ -68,7 +68,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className="bg-black relative w-full h-[1550px] md:h-[1250px] lg:h-[1300px]">
+    <div className="bg-black relative w-full h-[1590px] md:h-[1250px] lg:h-[1300px]">
       {/* bacground */}
       <div className="absolute inset-0 z-0">
         <ContactBackground
