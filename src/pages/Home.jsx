@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "../components/canvas";
 import { Link } from "react-router-dom";
+import RotatingText from "../components/RotatingText";
 
 const Home = () => {
   return (
@@ -19,11 +20,22 @@ const Home = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-blue-500">Akbar </span>
+            Hi, I'm
+            <RotatingText
+              texts={["AKBAR", "DERMAWAN", "MAHBUBILLAH"]}
+              mainClassName=" text-blue-500 overflow-hidden  justify-center rounded-lg"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+            />
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I Full Stack Web Developer, user <br className="sm:block hidden" />
-            interfaces and web applications
+            Full Stack Web Developer
           </p>
         </div>
       </div>

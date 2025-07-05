@@ -20,7 +20,7 @@ import * as THREE from "three";
 extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({
-  position = [0, 0, 20],
+  position = [0, 0, 10],
   gravity = [0, -40, 0],
   fov = 20,
   transparent = true,
@@ -124,9 +124,10 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
     () => typeof window !== "undefined" && window.innerWidth < 1024
   );
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1.4]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1.4]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1.2]);
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.4]); // dari 0.8
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 0.4]); // dari 0.8
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.3]); // dari 0.6
+
   useSphericalJoint(j3, card, [
     [0, 0, 0],
     [0, 1.5, 0],

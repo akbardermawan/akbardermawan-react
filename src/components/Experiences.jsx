@@ -2,12 +2,16 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import SplitText from "./SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const Experiences = () => {
   const containerRef = useRef(null);
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
 
   useGSAP(
     () => {
@@ -34,7 +38,22 @@ const Experiences = () => {
   return (
     <div ref={containerRef} id="about" className="min-h-screen w-screen ">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <h2 className="text-3xl md:text-6xl font-bold">Experience Work</h2>
+        <h2 className="text-3xl md:text-6xl font-bold">
+          <SplitText
+            text=" Experience Work"
+            className="text-3xl md:text-6xl  font-semibold text-center"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
+          />
+        </h2>
 
         <div className="about-subtext text-center px-4 max-w-xl">
           <p>Modern, Functional, and Responsive</p>

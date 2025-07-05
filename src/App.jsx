@@ -3,9 +3,20 @@ import Navigation from "./components/Navigation";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
+import LoadingScreen from "./components/LoadingScreen";
+import { useEffect, useState } from "react";
+
 function App() {
   const location = useLocation();
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+  return loading ? (
+    <LoadingScreen />
+  ) : (
     <>
       <Navigation />
 

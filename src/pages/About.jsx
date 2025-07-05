@@ -22,6 +22,7 @@ const About = () => {
 
   // Saat scrollY > 500px, turunkan z-index agar tidak menutupi konten
   const zIndex = useTransform(scrollY, [0, 500], [30, -10]);
+
   return (
     <div className="relative">
       <CanvasCursor />
@@ -31,7 +32,7 @@ const About = () => {
       </motion.div>
 
       <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-200">
-        <div className="relative h-[350px] md:h-[450px] lg:h-[550px] w-full overflow-hidden">
+        <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
           <img
             src="/about.jpg"
             alt="about"
@@ -44,7 +45,7 @@ const About = () => {
 
         <div className="max-w-7xl mx-auto mt-1 mb-15 lg:mb-20  flex flex-col md:flex-row items-center md:items-center justify-center gap-6 px-4">
           <div className="w-full md:w-[45%] h-[320px] flex justify-center items-center">
-            <div className="relative -top-40">
+            <div className="relative top-45">
               <LanyardCanvas />
             </div>
           </div>

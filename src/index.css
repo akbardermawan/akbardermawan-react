@@ -177,3 +177,23 @@ textarea {
     }
   }
 }
+
+//LodinScrenn
+@keyframes loader-glow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  20% {
+    transform: scale(1, 2.5);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7);
+  }
+  40% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.loader-glow {
+  animation: loader-glow 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}

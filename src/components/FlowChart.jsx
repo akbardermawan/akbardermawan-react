@@ -158,7 +158,7 @@ const FlowChart = () => {
                 {/* Garis vertikal */}
                 <div
                   ref={(el) => (lineRefs.current[idx] = el)}
-                  className="absolute left-1/2 -translate-x-1/2 w-1 bg-black md:bg-gray-300 h-[140%] md:h-200p top-0 z-0"
+                  className="absolute left-1/2 -translate-x-1/2 w-1 bg-black/5 md:bg-gray-300 h-[140%] md:h-200p top-0 z-0"
                   style={{
                     opacity: 0,
                     transform: "translateX(-50%) scaleY(0)",
