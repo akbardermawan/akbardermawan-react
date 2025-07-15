@@ -19,21 +19,28 @@ const Home = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm
-            <RotatingText
-              texts={["AKBAR", "DERMAWAN", "MAHBUBILLAH"]}
-              mainClassName=" text-blue-500 overflow-hidden  justify-center rounded-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2000}
-            />
-          </h1>
+          <div className="grid grid-cols-12 gap-1">
+            <div className="col-span-3  ">
+              <p className={` text-white text-2xl`}> Hi, I'm</p>
+            </div>
+            <div className="col-span-9   ">
+              <h2 className={`${styles.heroHeadText} text-white`}>
+                <RotatingText
+                  texts={["AKBAR", "DERMAWAN", "MAHBUBILLAH"]}
+                  mainClassName=" text-blue-500 overflow-hidden  justify-start rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                />
+              </h2>
+            </div>
+          </div>
+
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Full Stack Web Developer
           </p>
