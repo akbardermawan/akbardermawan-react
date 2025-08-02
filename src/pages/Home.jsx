@@ -19,11 +19,11 @@ const Home = () => {
         </div>
 
         <div>
-          <div className="grid grid-cols-12 gap-1">
-            <div className="col-span-3  ">
-              <p className={` text-white text-2xl`}> Hi, I'm</p>
+          <div className="flex flex-col">
+            <div className=" w-full ">
+              <p className={` text-gray-500 text-2xl`}> Hi, I'm</p>
             </div>
-            <div className="col-span-9   ">
+            <div className="w-full ">
               <h2 className={`${styles.heroHeadText} text-white`}>
                 <RotatingText
                   texts={["AKBAR", "DERMAWAN", "MAHBUBILLAH"]}

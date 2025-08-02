@@ -16,7 +16,7 @@ const Single = ({ item }) => {
     >
       <div className="w-full h-full max-w-7xl flex flex-col md:flex-row items-center gap-5 overflow-hidden">
         {/* Gambar */}
-        <div className="w-full md:w-1/2 h-64 md:h-[50%] lg:h-[40%] pt-10 lg:pt-30 lg:mr-10">
+        <div className="w-full md:w-1/2 h-64 md:h-[50%] lg:h-[40%] pt-10 lg:pt-32 lg:mr-10">
           <img
             src={item.img}
             alt="image"

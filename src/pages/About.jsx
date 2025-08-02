@@ -16,6 +16,7 @@ import SingleCard from "../components/SingleCard";
 import CanvasCursor from "../components/CanvasCursor";
 import FlowChart from "../components/FlowChart";
 import LanyardCanvas from "./../components/Lanyard/LanyardCanvas";
+import PhotoAbout from "../components/PhotoAbout";
 
 const About = () => {
   const { scrollY } = useScroll();
@@ -46,7 +47,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto mt-1 mb-15 lg:mb-20  flex flex-col md:flex-row items-center md:items-center justify-center gap-6 px-4">
           <div className="w-full md:w-[45%] h-[320px] flex justify-center items-center">
             <div className="relative top-45">
-              <LanyardCanvas />
+              <PhotoAbout />
             </div>
           </div>
           <div className="w-full md:w-[55%] text-center md:text-left xl:pt-8 md:pr-2">
