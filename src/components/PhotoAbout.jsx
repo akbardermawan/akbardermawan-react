@@ -1,21 +1,21 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import LanyardCanvas from "./Lanyard/LanyardCanvas";
+import { useEffect, useState, Suspense } from "react";
+
+// Lazy load LanyardCanvas
+const LanyardCanvas = React.lazy(() => import("./Lanyard/LanyardCanvas"));
 
 const PhotoAbout = () => {
   const [showLanyard, setShowLanyard] = useState(false);
 
   useEffect(() => {
-    // Tunggu sampai browser idle, baru tunjukkan Lanyard (bisa diganti delay juga)
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(() => {
-        setShowLanyard(true);
-      });
-    } else {
-      // fallback untuk browser yang tidak support
-      setTimeout(() => setShowLanyard(true), 10000);
-    }
+    // Tunggu 15 detik sebelum load komponen
+    const timer = setTimeout(() => {
+      setShowLanyard(true);
+    }, 10000);
+
+    return () => clearTimeout(timer);
   }, []);
+
   return (
     <div>
       {!showLanyard && (
@@ -30,9 +30,11 @@ const PhotoAbout = () => {
         </div>
       )}
 
-      <div style={{ display: showLanyard ? "block" : "none" }}>
-        <LanyardCanvas />
-      </div>
+      {showLanyard && (
+        <Suspense fallback={<div>Loading animation...</div>}>
+          <LanyardCanvas />
+        </Suspense>
+      )}
     </div>
   );
 };

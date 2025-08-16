@@ -15,14 +15,64 @@ import IntroductionVidio from "../components/IntroductionVidio";
 import SingleCard from "../components/SingleCard";
 import CanvasCursor from "../components/CanvasCursor";
 import FlowChart from "../components/FlowChart";
-import LanyardCanvas from "./../components/Lanyard/LanyardCanvas";
 import PhotoAbout from "../components/PhotoAbout";
+
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const { scrollY } = useScroll();
 
   // Saat scrollY > 500px, turunkan z-index agar tidak menutupi konten
   const zIndex = useTransform(scrollY, [0, 500], [30, -10]);
+
+  // Efek animasi fade-in dari kiri saat scroll
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".fade-left").forEach((el) => {
+        gsap.from(el, {
+          x: 50,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+            // untuk sekali jalan:
+            // toggleActions: "play none none none"
+          },
+        });
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
+  // Efek animasi zoom-in saat scroll
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".zoom-in").forEach((el) => {
+        gsap.from(el, {
+          scale: 0.5,
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+            // hanya sekali jalan:
+            // toggleActions: "play none none none"
+          },
+        });
+      });
+    });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div className="relative">
@@ -63,7 +113,10 @@ const About = () => {
             </span>
             <div className="grid grid-cols-2 gap-2 mt-5 mx-auto">
               {personalInfo.map((p, i) => (
-                <div key={i} className="text-left text-sm  lg:text-xl">
+                <div
+                  key={i}
+                  className="fade-left text-left text-sm  lg:text-xl"
+                >
                   {p.title}{" "}
                   <span
                     className={`text-blue-500 md:text-sm ${
@@ -98,9 +151,9 @@ const About = () => {
 
         {/* skill */}
         <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 md:mt10">
-          <h3 className="text-xl text-gray-700">SKILLS</h3>
+          <h3 className="zoom-in text-4xl text-blue-800">SKILLS</h3>
 
-          <span className="text-2xl text-black mb-5">WHAT I CAN DO</span>
+          <span className="text-2xl text-gray-700 mb-5">WHAT I CAN DO</span>
           <div className="flex flex-col md:flex-row">
             <div className="w-[100%] md:w-[50%] p-1 flex items-center justify-center">
               <SingleCard />
@@ -131,7 +184,7 @@ const About = () => {
           <IntroductionVidio />
         </div>
         <div className=" max-w-7xl mx-auto mt-15 mb-15 lg:mb-20  px-8">
-          <h3 className="text-2xl font-bold text-black">QUOTES</h3>
+          <h3 className="zoom-in text-2xl font-bold text-black">QUOTES</h3>
           <span className="text-sm  text-gray-600">Words that inspire me</span>
           <div>
             <Quotes />
