@@ -19,7 +19,7 @@ const ServiceCard = ({ key, index, service }) => {
             className="w-16 h-16 rounded object-cover"
           />
           <div>
-            <h4 className="font-semibold text-xl text-blue-700">
+            <h4 className="font-semibold text-xl text-sky-700">
               {service.title}
             </h4>
           </div>
@@ -30,7 +30,7 @@ const ServiceCard = ({ key, index, service }) => {
         {service.skill?.map((s, i) => (
           <span
             key={i}
-            className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-800 hover:text-white"
+            className="bg-blue-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-sky-800 hover:text-white"
           >
             {s}
           </span>

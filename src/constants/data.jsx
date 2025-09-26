@@ -57,54 +57,6 @@ export const links = [
   },
 ];
 
-export const personalInfo = [
-  {
-    id: 1,
-    title: "Age : ",
-    description: "27 Years",
-  },
-
-  {
-    id: 2,
-    title: "Nationality : ",
-    description: "Indonesia",
-  },
-
-  {
-    id: 3,
-    title: "Freelance : ",
-    description: "Available",
-  },
-
-  {
-    id: 4,
-    title: "Address : ",
-    description: "East Java",
-  },
-  {
-    id: 5,
-    title: "Langages : ",
-    description: "Indonesia, English",
-  },
-
-  {
-    id: 6,
-    title: "Phone : ",
-    description: "+6285337528525",
-  },
-
-  {
-    id: 7,
-    title: "Github : ",
-    description: "akbardermawan",
-  },
-  {
-    id: 8,
-    title: "Email : ",
-    description: "akbardermawan27@gmail.com",
-  },
-];
-
 export const resume = [
   {
     id: 1,

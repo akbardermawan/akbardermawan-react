@@ -3,14 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { services } from "../constants/index";
 import ServiceCard from "../components/ServiceCard";
 import Experiences from "../components/Experiences";
-import Technologies from "../components/Technologies";
 import Quotes from "../components/Quotes";
 import Footer from "../components/Footer";
 import TypeWriter from "../components/TypeWriter";
-import { personalInfo } from "../constants/data";
 import { FiDownload } from "react-icons/fi";
 import InfiniteScroll from "../components/InfiniteScroll";
-import CoverAbout from "../components/CoverAbout";
 import IntroductionVidio from "../components/IntroductionVidio";
 import SingleCard from "../components/SingleCard";
 import CanvasCursor from "../components/CanvasCursor";
@@ -75,22 +72,19 @@ const About = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <CanvasCursor />
       {/* Bagian Sticky Cover */}
-      <motion.div style={{ zIndex }} className="sticky top-0 w-full h-[50vh]">
-        <CoverAbout />
-      </motion.div>
 
-      <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-200">
-        <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
+      <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-100">
+        <div className="relative h-[350px] md:h-[450px]  w-full overflow-hidden">
           <img
             src="/about.jpg"
             alt="about"
             className=" w-full h-full object-cover object-bottom"
           />
           <p className="absolute text-white bottom-1 left-4 md:bottom-3 md:left-6 md:text-6xl lg:bottom-16 lg:left-20 lg:text-8xl">
-            About <span className="font-bold text-blue-600">Me</span>
+            About <span className="font-bold text-sky-500">Me</span>
           </p>
         </div>
 
@@ -108,50 +102,32 @@ const About = () => {
                 pause={80}
               />
             </div>
-            <span className="text-sm  text-purple-950">
-              Full Stack Web Developer
-            </span>
-            <div className="grid grid-cols-2 gap-2 mt-5 mx-auto">
-              {personalInfo.map((p, i) => (
-                <div
-                  key={i}
-                  className="fade-left text-left text-sm  lg:text-xl"
-                >
-                  {p.title}{" "}
-                  <span
-                    className={`text-blue-500 md:text-sm ${
-                      p.id === 8 ? "font-thin text-xs" : "font-semibold"
-                    }`}
-                  >
-                    {p.description}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="flex mt-3">
-              <a
-                href="/files/CV_Akbar.pdf"
-                download
-                aria-label="Download Resume"
+            <div className="mt-2 md:mt-4 mx-auto px-1">
+              <p
+                className="max-w-2xl mx-auto text-justify text-sky-900 
+             indent-8 first-letter:text-2xl first-letter:font-bold first-letter:mr-1
+             md:text-2xl md:first-letter:text-3xl md:pr-4"
               >
-                <motion.button
-                  whileHover={{ backgroundColor: "#2563eb" }} // Tailwind blue-600
-                  transition={{ duration: 0.3 }}
-                  className="flex w-[140px] lg:w-[160px] h-[25px] lg:h-[30px] rounded-full pl-1 lg:pl-3 border-2 border-blue-600 justify-between items-center"
-                >
-                  <span className="text-black">Download CV</span>
-                  <div className="w-[25px] lg:w-[30px] h-[25px] lg:h-[30px] rounded-full bg-blue-600 flex justify-center items-center">
-                    <FiDownload className="text-black" />
-                  </div>
-                </motion.button>
-              </a>
+                I am a website developer with an educational background in
+                Agricultural Engineering from the University of Jember,
+                Indonesia. Although my career path slightly deviates from my
+                academic background, I chose to focus on enhancing my
+                programming skills, particularly in web development. Check out
+                <a href="https://github.com/akbardermawan">
+                  <span className="text-gray-600 underline decoration-gray-400 decoration-2">
+                    {" "}
+                    My Github
+                  </span>
+                </a>
+                .
+              </p>
             </div>
           </div>
         </div>
 
         {/* skill */}
         <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 md:mt10">
-          <h3 className="zoom-in text-4xl text-blue-800">SKILLS</h3>
+          <h3 className="zoom-in text-4xl text-sky-800">SKILLS</h3>
 
           <span className="text-2xl text-gray-700 mb-5">WHAT I CAN DO</span>
           <div className="flex flex-col md:flex-row">
@@ -170,7 +146,7 @@ const About = () => {
         </div>
 
         {/* experience */}
-        <div className="w-full ">
+        <div className="w-full">
           <div>
             <Experiences />
           </div>

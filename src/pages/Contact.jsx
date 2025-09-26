@@ -87,7 +87,7 @@ const Contact = () => {
       <div className="relative z-5 max-w-7xl pt-16 px-4 sm:px-6 lg:px-8 mx-auto">
         <header className="flex justify-center items-center ">
           <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl text-white">
-            My <span className="font-extrabold text-blue-600">Contact</span>
+            My <span className="font-extrabold text-sky-400">Contact</span>
           </h1>
         </header>
 
@@ -106,7 +106,7 @@ const Contact = () => {
             <div className=" w-full">
               <div>
                 <div className="flex items-center mt-2">
-                  <FaWhatsapp className="w-[25px] h-[25px] text-blue-600" />
+                  <FaWhatsapp className="w-[25px] h-[25px] text-sky-400" />
                   <div className="ml-3">
                     <p className="text-gray-400 text-sm">Call me</p>
                     <p className=" text-white">082337528525</p>
@@ -117,7 +117,7 @@ const Contact = () => {
                   href="mailto:akbardermawan27@gmail.com"
                   className="flex items-center mt-2"
                 >
-                  <MdEmail className="w-[25px] h-[25px] text-blue-600" />
+                  <MdEmail className="w-[25px] h-[25px] text-sky-400" />
                   <div className="ml-3">
                     <span className="text-gray-400 text-sm">Mail me</span>
                     <p className=" text-white">akbardermawan27@gmail.com</p>
@@ -131,7 +131,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="flex items-center mr-2"
                 >
-                  <FaLinkedin className="w-[25px] h-[25px] text-blue-600" />
+                  <FaLinkedin className="w-[25px] h-[25px] text-sky-400" />
                 </a>
                 <a
                   href="https://github.com/akbardermawan"
@@ -139,7 +139,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="flex items-center mr-2"
                 >
-                  <FaGithub className="w-[25px] h-[25px] text-blue-600" />
+                  <FaGithub className="w-[25px] h-[25px] text-sky-400" />
                 </a>
                 <a
                   href="https://github.com/akbardermawan"
@@ -147,7 +147,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="flex items-center mr-2"
                 >
-                  <FaYoutube className="w-[25px] h-[25px] text-blue-600" />
+                  <FaYoutube className="w-[25px] h-[25px] text-sky-400" />
                 </a>
               </div>
             </div>
@@ -159,7 +159,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="w-full  mt-8 md:mt-12 flex flex-col gap-6 bg-gradient-to-b from-blue-500/50 to-black/90 p-6 sm:p-7 rounded-xl"
+            className="w-full  mt-8 md:mt-12 flex flex-col gap-6 bg-gradient-to-b from-sky-500/50 to-black/90 p-6 sm:p-7 rounded-xl"
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-2">Your Name</span>
@@ -169,7 +169,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
-                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-blue-500 font-medium"
+                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-sky-500 font-medium"
               />
             </label>
 
@@ -181,7 +181,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email address?"
-                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-blue-500 font-medium"
+                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-sky-500 font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -192,7 +192,7 @@ const Contact = () => {
                 value={form.nohp}
                 onChange={handleChange}
                 placeholder="What's your no hp?"
-                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-blue-500 font-medium"
+                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-sky-500 font-medium"
               />
             </label>
 
@@ -204,7 +204,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What you want to say?"
-                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-blue-500 font-medium"
+                className="bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none ring-2 ring-blue-400/50 focus:ring-2 focus:ring-sky-500 font-medium"
               />
             </label>
 
@@ -214,7 +214,7 @@ const Contact = () => {
               color="#3b82f6" // warna biru
               speed="4s"
               thickness={2}
-              className="rounded-xl px-8 py-3 font-bold text-white hover:bg-blue-700 hover:text-black transition duration-300 self-center"
+              className="rounded-xl px-8 py-3 font-bold text-white hover:bg-sky-700 hover:text-black transition duration-300 self-center"
             >
               {loading ? "Sending..." : "Send"}
             </ContactButton>

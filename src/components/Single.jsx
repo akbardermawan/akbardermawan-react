@@ -29,7 +29,7 @@ const Single = ({ item }) => {
           <h2 className="text-2xl md:text-3xl font-bold mb-2">{item.title}</h2>
           <p className="text-gray-700 text-sm md:text-base">{item.desc}</p>
           <div>
-            <button className="bg-blue-700 text-white rounded-2xl py-2 px-6 w-full md:w-48 transition hover:bg-blue-800 mt-10">
+            <button className="bg-sky-700 text-white rounded-2xl py-2 px-6 w-full md:w-48 transition hover:bg-blue-800 mt-10">
               See Demo
             </button>
           </div>
