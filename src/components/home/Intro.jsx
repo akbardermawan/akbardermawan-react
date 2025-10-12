@@ -42,7 +42,7 @@ const Intro = () => {
     }
   }, []);
   return (
-    <div className="relative w-full h-screen pl-6 md:pl-24 lg:pl-30 xl:pl-36">
+    <div className="relative w-full h-screen pl-6 md:pl-24 lg:pl-34 xl:pl-40">
       <div className="w-full h-full inset-0 z-0 absolute ">
         <BackgroundIntro />
       </div>
@@ -77,7 +77,9 @@ const Intro = () => {
                   <FaArrowRight size={20} />
                 </Link>
               </div>
-              <p className="text-4xl md:text-6xl xl:text-8xl">Web Developer</p>
+              <p className="text-4xl md:text-6xl xl:text-8xl text-white">
+                Web Developer
+              </p>
               <h2 className="text-gray-600">
                 <RotatingText
                   texts={["+ Full Stact", "+ Backend ", "+ Frontend"]}
@@ -104,7 +106,7 @@ const Intro = () => {
                       transition={{ duration: 0.3 }}
                       className="flex w-[160px] lg:w-[180px] h-[25px] lg:h-[30px] rounded-full pl-2 lg:pl-4 py-2 border-2 border-sky-500 justify-between items-center text-black hover:text-white"
                     >
-                      <span className="text-lg">Download CV</span>
+                      <span className="text-lg text-white">Download CV</span>
                       <div className="w-[25px] lg:w-[30px] h-[25px] lg:h-[30px] rounded-full bg-sky-500 flex justify-center items-center">
                         <FiDownload className="" />
                       </div>

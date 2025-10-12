@@ -30,7 +30,7 @@ const PhotoAbout = () => {
             </div>
             <div className="absolute z-10 -left-10 md:-left-18 xl:-left-24 bottom-26">
               <div className="rotate-270">
-                <p className="text-6xl md:text-7xl xl:text-8xl  text-white md:text-black font-bold drop-shadow-lg ">
+                <p className="text-6xl md:text-7xl xl:text-8xl  text-white font-bold drop-shadow-lg ">
                   アクバル
                 </p>
               </div>

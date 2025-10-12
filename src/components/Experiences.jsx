@@ -41,7 +41,7 @@ const Experiences = () => {
         <h2 className="text-3xl md:text-6xl font-bold">
           <SplitText
             text=" Experience Work"
-            className="text-3xl md:text-6xl  font-semibold text-center"
+            className="text-3xl md:text-6xl  font-semibold text-center text-sky-400"
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -56,7 +56,7 @@ const Experiences = () => {
         </h2>
 
         <div className="about-subtext text-center px-4 max-w-xl">
-          <p>Modern, Functional, and Responsive</p>
+          <p className="text-sky-800">Modern, Functional, and Responsive</p>
           <p className="text-gray-500">
             One sip of coffee, a stream of elegant code
           </p>

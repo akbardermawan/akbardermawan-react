@@ -14,6 +14,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     { href: "/projects", label: "Projects" },
     { href: "/contact", label: "Contact" },
   ];
@@ -21,7 +22,7 @@ const Navbar = () => {
   return (
     <header>
       {/* Mobile Header */}
-      <div className="flex md:hidden fixed top-0 w-full h-[78px] justify-between items-center px-6 z-50">
+      <div className="flex md:hidden fixed top-0 w-full h-[78px] justify-between items-center pl-6 pr-6 z-50 text-gray-600 overflow-hidden">
         <Link to={"/"}>
           <img src="/logo.png" alt="logo" className="w-[50px]" />
         </Link>

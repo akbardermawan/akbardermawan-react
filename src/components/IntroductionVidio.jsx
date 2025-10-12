@@ -4,12 +4,12 @@ const IntroductionVidio = () => {
   return (
     <div>
       <div className="mb-4 ">
-        <h3 className="text-xl md:text-4xl font-semibold text-gray-700 mb-5 md:mb-10 lg:mb-20">
+        <h3 className="text-xl md:text-4xl font-semibold text-sky-400 mb-5 md:mb-10 lg:mb-20">
           Introduction
         </h3>
       </div>
 
-      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden p-4 ">
+      <div className="max-w-3xl mx-auto bg-white/50 shadow-lg rounded-2xl overflow-hidden p-4 ">
         <div className="relative w-full pb-[56.25%]">
           {" "}
           {/* 16:9 Aspect Ratio */}

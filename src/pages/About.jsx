@@ -72,20 +72,35 @@ const About = () => {
   }, []);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       <CanvasCursor />
       {/* Bagian Sticky Cover */}
 
-      <div className="flex-row justify-center items-center text-[#0a1a2f] bg-gray-100">
-        <div className="relative h-[350px] md:h-[450px]  w-full overflow-hidden">
+      <div className="flex-row justify-center items-center text-[#0a1a2f] bg-black/95">
+        <div className="relative h-[350px] md:h-[450px] w-full overflow-hidden">
           <img
             src="/about.jpg"
             alt="about"
-            className=" w-full h-full object-cover object-bottom"
+            className="w-full h-full object-cover object-bottom"
           />
-          <p className="absolute text-white bottom-1 left-4 md:bottom-3 md:left-6 md:text-6xl lg:bottom-16 lg:left-20 lg:text-8xl">
-            About <span className="font-bold text-sky-500">Me</span>
-          </p>
+
+          {/* overlay hitam semi-transparan */}
+          <div className="absolute inset-0 bg-black/70"></div>
+
+          {/* teks dan efek hover */}
+          <div
+            className="relative z-10 inline-block 
+             after:content-[''] after:absolute after:left-0 after:bottom-0 
+             after:w-full after:h-[2px] after:bg-sky-400 
+             after:scale-x-0 after:origin-left 
+              after:transition-transform after:duration-300 
+              hover:after:scale-x-100 zoom-in
+              bottom-8 left-6 md:bottom-24 xl:bottom-32 md:left-20"
+          >
+            <h2 className="text-white text-4xl md:text-6xl lg:text-8xl font-light">
+              About <span className="font-bold text-sky-400">Me</span>
+            </h2>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto mt-1 mb-15 lg:mb-20  flex flex-col md:flex-row items-center md:items-center justify-center gap-6 px-4">
@@ -94,7 +109,7 @@ const About = () => {
               <PhotoAbout />
             </div>
           </div>
-          <div className="w-full md:w-[55%] text-center md:text-left xl:pt-8 md:pr-2">
+          <div className="w-full md:w-[55%] text-center md:text-left xl:pt-8 md:pr-2 ">
             <div>
               <TypeWriter
                 text="Akbar Dermawan Mahbubillah"
@@ -102,9 +117,9 @@ const About = () => {
                 pause={80}
               />
             </div>
-            <div className="mt-2 md:mt-4 mx-auto px-1">
+            <div className="mt-2 md:mt-4 mx-auto px-1 zoom-in ">
               <p
-                className="max-w-2xl mx-auto text-justify text-sky-900 
+                className="max-w-2xl mx-auto text-justify text-sky-300 
              indent-8 first-letter:text-2xl first-letter:font-bold first-letter:mr-1
              md:text-2xl md:first-letter:text-3xl md:pr-4"
               >
@@ -126,8 +141,18 @@ const About = () => {
         </div>
 
         {/* skill */}
-        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 md:mt10">
-          <h3 className="zoom-in text-4xl text-sky-800">SKILLS</h3>
+        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 md:mt-5">
+          <div
+            className="zoom-in relative inline-block 
+            after:content-[''] after:absolute after:left-0 after:bottom-0 
+            after:w-full after:h-[2px] after:bg-sky-400 
+            after:scale-x-0 after:origin-left 
+            after:transition-transform after:duration-300 
+            hover:after:scale-x-100"
+          >
+            <h3 className="text-4xl text-sky-400">SKILLS</h3>
+          </div>
+          <br />
 
           <span className="text-2xl text-gray-700 mb-5">WHAT I CAN DO</span>
           <div className="flex flex-col md:flex-row">
@@ -156,11 +181,13 @@ const About = () => {
         </div>
 
         {/* Introduction vidio  */}
-        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 mt-5 md:mt-10 lg:mt-20">
+        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 mt-5 md:mt-10 lg:mt-20 zoom-in ">
           <IntroductionVidio />
         </div>
-        <div className=" max-w-7xl mx-auto mt-15 mb-15 lg:mb-20  px-8">
-          <h3 className="zoom-in text-2xl font-bold text-black">QUOTES</h3>
+        <div className="zoom-in max-w-7xl mx-auto mt-15 mb-15 lg:mb-20  px-8">
+          <h3 className=" text-2xl xl:text-4xl font-bold text-sky-400">
+            QUOTES
+          </h3>
           <span className="text-sm  text-gray-600">Words that inspire me</span>
           <div>
             <Quotes />

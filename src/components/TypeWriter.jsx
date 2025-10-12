@@ -39,6 +39,7 @@ const TypeWriter = ({ text = "", speed = 100, pause = 100 }) => {
   return (
     <motion.span
       style={{
+        color: "white",
         fontFamily: "bold",
         whiteSpace: "pre",
         fontSize: "clamp(1.6rem, 2vw + 1rem, 3rem)",

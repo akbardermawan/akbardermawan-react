@@ -40,13 +40,15 @@ const Quotes = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto px-4 py-8">
+    <div className="max-w-xl mx-auto px-4 py-4">
       <Slider {...settings}>
         {quotes.map((quote, index) => (
           <div key={index}>
-            <div className="bg-white shadow-md rounded-lg p-6 text-center">
-              <p className="text-gray-700 italic mb-4">"{quote.text}"</p>
-              <p className="text-sm font-medium text-gray-500">
+            <div className="bg-gray-900/50 shadow-md rounded-lg p-6 text-center">
+              <p className="text-white md:text-xl xl:text-3xl italic mb-4">
+                "{quote.text}"
+              </p>
+              <p className="text-sm font-medium text-gray-500 xl:text-xl">
                 - {quote.author}
               </p>
             </div>
