@@ -68,7 +68,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className="bg-black relative w-full h-[1590px] md:h-[1250px] lg:h-[1300px]">
+    <div className="bg-black/95 relative w-full h-[1590px] md:h-[1250px] lg:h-[1300px]">
       {/* bacground */}
       <div className="absolute inset-0 z-0">
         <ContactBackground
@@ -159,7 +159,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="w-full  mt-8 md:mt-12 flex flex-col gap-6 bg-gradient-to-b from-sky-500/50 to-black/90 p-6 sm:p-7 rounded-xl"
+            className="w-full  mt-8 md:mt-12 flex flex-col gap-6 bg-gradient-to-b from-sky-500/50 to-black/50 p-6 sm:p-7 rounded-xl"
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-2">Your Name</span>

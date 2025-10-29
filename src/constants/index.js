@@ -216,11 +216,12 @@ const testimonials = [
 const projects = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.unsplash.com/photo-1747069334505-cf6815248cfe?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
-    url: "",
-    code: "",
+    title: "React eCommerce",
+    img: "/img/9a.JPG",
+    desc: "This e-commerce website functions as an intermediary between sellers and buyers, making it easier to conduct buying and selling transactions anywhere.",
+    url: "https://www.youtube.com/watch?v=G9s_WS0H7hg&t=129s",
+    code: "https://github.com/akbardermawan/E-ComerrceStore",
+    tec: "HTML 5 | Express JS | Rect JS | Redux | Tailwind CSS | MongoDB",
   },
   {
     id: 2,
@@ -229,6 +230,7 @@ const projects = [
     desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
     url: "",
     code: "",
+    tec: "",
   },
   {
     id: 3,
@@ -237,6 +239,7 @@ const projects = [
     desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
     url: "",
     code: "",
+    tec: "",
   },
   {
     id: 4,
@@ -245,6 +248,7 @@ const projects = [
     desc: "Lorem aku mendadri jatri dairi  sesnsidieeri binaguang taka pedrnah nemsukan adraha hidupa dengan baandyajk penyesalan",
     url: "",
     code: "",
+    tec: "",
   },
 ];
 

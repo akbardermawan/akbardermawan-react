@@ -40,9 +40,13 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <nav className="hidden md:flex h-screen w-[78px] lg:w-[86px] xl:w-[92px]  fixed top-0 left-0 z-50 pl-4 xl:pl-6">
         <div className="md:flex md:flex-col h-screen md:-mx-4 md:pb-6">
-          <div className="hidden md:flex pt-2 pl-1">
+          <div className="hidden md:flex pt-2 pl-4 xl:pl-1">
             <Link to={"/"}>
-              <img src="/logo.png" alt="logo" className="w-[80px]" />
+              <img
+                src="/logo.png"
+                alt="logo"
+                className="w-[50px] xl:w-[80px]"
+              />
             </Link>
           </div>
           <div className="flex flex-col justify-between h-full">
@@ -53,11 +57,11 @@ const Navbar = () => {
                   to={link.href}
                   className={
                     cn(
-                      "text-xl rotate-270 font-medium transition-colors hover:text-sky-500 relative my-6 py-3",
+                      "text-lg xl:text-xl rotate-270 font-medium transition-colors hover:text-sky-600 relative my-5 xl:my-6 py-3",
                       location.pathname === link.href
-                        ? "text-sky-500 after:scale-x-100 font-extrabold"
+                        ? "text-sky-600 after:scale-x-100 font-extrabold"
                         : "text-gray-300 dark:text-gray-300 after:scale-x-0 font-extrabold",
-                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-500",
+                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-600",
                       "after:origin-left after:transition-transform after:duration-300",
                       "hover:after:scale-x-100"
                     ) // Add hover effect for the underline
@@ -67,27 +71,27 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <div className="pl-4 flex flex-col gap-4">
+            <div className="pl-7 flex flex-col gap-4">
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin className="w-7 h-7 hover:text-sky-500 hover:scale-110 transition-transform text-gray-300" />
+                <FaLinkedin className="w-7 xl:w-9 h-7 xl:h-9 hover:text-sky-600 hover:scale-110 transition-transform text-gray-300" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaTwitter className="w-7 h-7 hover:text-sky-500 hover:scale-110 transition-transform text-gray-300" />
+                <FaTwitter className="w-7 xl:w-9 h-7 xl:h-9 hover:text-sky-600 hover:scale-110 transition-transform text-gray-300" />
               </a>
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub className="w-7 h-7 hover:text-sky-500 dark:text-gray-200 hover:scale-110 transition-transform text-gray-300" />
+                <FaGithub className="w-7 xl:w-9 h-7 xl:h-9 hover:text-sky-600 dark:text-gray-200 hover:scale-110 transition-transform text-gray-300" />
               </a>
             </div>
           </div>
@@ -102,7 +106,7 @@ const Navbar = () => {
             : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
-        <div className="w-full h-[95%] flex flex-col justify-between pb-4">
+        <div className="w-full h-[95%] flex flex-col justify-between">
           <div className="flex flex-col items-center space-y-4 py-20">
             {navLinks.map((link) => (
               <Link
@@ -120,27 +124,27 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <div className="pl-4 flex  gap-4">
+          <div className="pl-4 flex  gap-5">
             <a
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="w-7 h-7 hover:text-sky-500 hover:scale-110 transition-transform" />
+              <FaLinkedin className="w-9 h-9 hover:text-sky-600 hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter className="w-7 h-7 hover:text-sky-500 hover:scale-110 transition-transform" />
+              <FaTwitter className="w-9 h-9 hover:text-sky-600 hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="w-7 h-7 hover:text-sky-500 dark:text-gray-200 hover:scale-110 transition-transform" />
+              <FaGithub className="w-9 h-9 hover:text-sky-600 dark:text-gray-200 hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>

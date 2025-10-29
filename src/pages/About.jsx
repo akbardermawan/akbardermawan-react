@@ -6,7 +6,6 @@ import Experiences from "../components/Experiences";
 import Quotes from "../components/Quotes";
 import Footer from "../components/Footer";
 import TypeWriter from "../components/TypeWriter";
-import { FiDownload } from "react-icons/fi";
 import InfiniteScroll from "../components/InfiniteScroll";
 import IntroductionVidio from "../components/IntroductionVidio";
 import SingleCard from "../components/SingleCard";
@@ -184,11 +183,21 @@ const About = () => {
         <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 mt-5 md:mt-10 lg:mt-20 zoom-in ">
           <IntroductionVidio />
         </div>
-        <div className="zoom-in max-w-7xl mx-auto mt-15 mb-15 lg:mb-20  px-8">
-          <h3 className=" text-2xl xl:text-4xl font-bold text-sky-400">
-            QUOTES
-          </h3>
-          <span className="text-sm  text-gray-600">Words that inspire me</span>
+        <div className="zoom-in max-w-7xl mx-auto mt-17 mb-15 lg:mb-20  px-8 ">
+          <div
+            className="relative inline-block 
+            after:content-[''] after:absolute after:left-0 after:bottom-0 
+            after:w-full after:h-[2px] after:bg-sky-400 
+            after:scale-x-0 after:origin-left 
+            after:transition-transform after:duration-300 
+            hover:after:scale-x-100"
+          >
+            <h3 className=" text-3xl xl:text-4xl font-bold text-sky-400">
+              QUOTES
+            </h3>
+          </div>
+          <br />
+          <span className="text-m  text-gray-600">Words that inspire me</span>
           <div>
             <Quotes />
           </div>

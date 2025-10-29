@@ -56,9 +56,9 @@ const Experiences = () => {
         </h2>
 
         <div className="about-subtext text-center px-4 max-w-xl">
-          <p className="text-sky-800">Modern, Functional, and Responsive</p>
+          <p className="text-white">Modern, Functional, and Responsive</p>
           <p className="text-gray-500">
-            One sip of coffee, a stream of elegant code
+            One sip of coffee is a stream of elegant code
           </p>
         </div>
       </div>

@@ -3,8 +3,15 @@ import React from "react";
 const IntroductionVidio = () => {
   return (
     <div>
-      <div className="mb-4 ">
-        <h3 className="text-xl md:text-4xl font-semibold text-sky-400 mb-5 md:mb-10 lg:mb-20">
+      <div
+        className="zoom-in relative inline-block 
+            after:content-[''] after:absolute after:left-0 after:bottom-0 
+            after:w-full after:h-[2px] after:bg-sky-400 
+            after:scale-x-0 after:origin-left 
+            after:transition-transform after:duration-300 
+            hover:after:scale-x-100 mb-5 md:mb-10 lg:mb-20 md:pl-2"
+      >
+        <h3 className="text-3xl md:text-4xl font-semibold text-sky-400 ">
           Introduction
         </h3>
       </div>

@@ -21,11 +21,11 @@ const PhotoAbout = () => {
       {!showLanyard && (
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full h-full flex justify-center items-center relative">
-            <div className="w-[65%] xl:w-[55%] rounded-xl overflow-hidden mt-[-300px]  ">
+            <div className="w-[65%] xl:w-[55%] rounded-xl overflow-hidden mt-[-300px] group">
               <img
                 src="img/pf1.JPG"
                 alt="Lanyard Placeholder"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="absolute z-10 -left-10 md:-left-18 xl:-left-24 bottom-26">

@@ -44,7 +44,7 @@ const Quotes = () => {
       <Slider {...settings}>
         {quotes.map((quote, index) => (
           <div key={index}>
-            <div className="bg-gray-900/50 shadow-md rounded-lg p-6 text-center">
+            <div className="p-6 text-center">
               <p className="text-white md:text-xl xl:text-3xl italic mb-4">
                 "{quote.text}"
               </p>

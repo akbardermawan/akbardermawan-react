@@ -42,7 +42,7 @@ const Intro = () => {
     }
   }, []);
   return (
-    <div className="relative w-full h-screen pl-6 md:pl-24 lg:pl-34 xl:pl-40">
+    <div className="relative w-full h-screen pl-6 md:pl-24 lg:pl-34 xl:pl-44">
       <div className="w-full h-full inset-0 z-0 absolute ">
         <BackgroundIntro />
       </div>
@@ -55,8 +55,8 @@ const Intro = () => {
                 text="AKBAR DERMAWAN MAHBUBILLAH"
                 animateOn="view"
                 revealDirection="center"
-                className="text-lg md:text-2xl text-gray-500 font-bold" // teks hasil ter-reveal
-                encryptedClassName="text-lg md:text-2xl text-gray-500" // teks scramble
+                className="text-lg md:text-2xl text-gray-300 font-bold" // teks hasil ter-reveal
+                encryptedClassName="text-lg md:text-2xl text-gray-300" // teks scramble
                 parentClassName="tracking-wider"
               />
             </div>
@@ -64,14 +64,14 @@ const Intro = () => {
               <div className="flex gap-4 md:gap-8 xl:gap-12">
                 <Link
                   to={"/contact"}
-                  className="flex items-center gap-2 text-xs md:text-sm xl:text-base text-gray-500 hover:text-sky-600 transition duration-300 cursor-pointer"
+                  className="flex items-center gap-2 text-base xl:text-lg text-gray-400 hover:text-sky-600 transition duration-300 cursor-pointer"
                 >
                   <span className="font-medium">Contact Me</span>
                   <FaTelegramPlane size={20} />
                 </Link>
                 <Link
                   to={"/about"}
-                  className="flex items-center gap-2 text-xs md:text-sm xl:text-base text-gray-500 hover:text-sky-600 transition duration-300 transform hover:translate-x-1 cursor-pointer"
+                  className="flex items-center gap-2 text-base xl:text-lg text-gray-400 hover:text-sky-600 transition duration-300 transform hover:translate-x-1 cursor-pointer"
                 >
                   <span className="font-medium">Detail Profile</span>
                   <FaArrowRight size={20} />
@@ -83,7 +83,7 @@ const Intro = () => {
               <h2 className="text-gray-600">
                 <RotatingText
                   texts={["+ Full Stact", "+ Backend ", "+ Frontend"]}
-                  mainClassName="text-2xl md:text-4xl xl:text-6xl px-2 sm:px-2 md:px-3 text-sky-500 overflow-hidden   rounded-lg"
+                  mainClassName="text-2xl md:text-4xl xl:text-6xl px-2 sm:px-2 md:px-3 text-sky-400 overflow-hidden   rounded-lg"
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
@@ -107,7 +107,7 @@ const Intro = () => {
                       className="flex w-[160px] lg:w-[180px] h-[25px] lg:h-[30px] rounded-full pl-2 lg:pl-4 py-2 border-2 border-sky-500 justify-between items-center text-black hover:text-white"
                     >
                       <span className="text-lg text-white">Download CV</span>
-                      <div className="w-[25px] lg:w-[30px] h-[25px] lg:h-[30px] rounded-full bg-sky-500 flex justify-center items-center">
+                      <div className="w-[25px] lg:w-[30px] h-[25px] lg:h-[30px] rounded-full bg-sky-400 flex justify-center items-center">
                         <FiDownload className="" />
                       </div>
                     </motion.button>
