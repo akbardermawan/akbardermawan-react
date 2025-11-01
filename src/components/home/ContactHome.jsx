@@ -4,17 +4,14 @@ import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaWhatsapp, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
-import { styles } from "../styles";
-import { EarthCanvas } from "../components/canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import Footer from "../components/Footer";
+import { EarthCanvas } from "../canvas";
+
 //bacground
-import ContactBackground from "../components/ContactBackground";
+import ContactBackground from "../ContactBackground";
 
-import ContactButton from "../components/ContactButton";
+import ContactButton from "../ContactButton";
 
-const Contact = () => {
+const ContactHome = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -68,7 +65,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className="bg-black/95 relative w-full h-[1590px] md:h-[1300px] lg:h-[1300px]">
+    <div className="bg-black/90 relative w-full h-[1590px] md:h-[1300px] lg:h-[1300px]">
       {/* bacground */}
       <div className="absolute inset-0 z-0">
         <ContactBackground
@@ -221,10 +218,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };
 
-export default Contact;
+export default ContactHome;

@@ -21,9 +21,9 @@ const Portfolio = () => {
   return (
     <div className="h-screen w-full flex flex-col bg-black/95  relative">
       {/* Header */}
-      <header className="w-full absolute top-0 z-10 bg-black/0 pt-16 md:pt-12 xl:pt-16  text-center">
+      <header className="w-full absolute top-0 z-10 bg-black/0 pt-14 md:pt-12 xl:pt-16  text-center">
         <div className="md:hidden">
-          <h1 className="font-extrabold md:font-extrabold text-sky-500 text-5xl pt-2">
+          <h1 className="font-extrabold text-sky-500 text-4xl pt-1">
             PROJECTS
           </h1>
         </div>

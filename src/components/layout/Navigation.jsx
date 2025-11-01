@@ -22,18 +22,15 @@ const Navbar = () => {
   return (
     <header>
       {/* Mobile Header */}
-      <div className="flex md:hidden fixed top-0 w-full h-[78px] justify-between items-center pl-6 pr-6 z-50 text-gray-600 overflow-hidden">
+      <div className="flex md:hidden fixed top-0 w-full h-[68px] justify-between items-center pl-6 pr-6 z-50 text-gray-600 overflow-hidden">
         <Link to={"/"}>
-          <img src="/logo.png" alt="logo" className="w-[50px]" />
+          <img src="/logo.png" alt="logo" className="w-[48px]" />
         </Link>
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="pr-4"
-        >
+        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="">
           {mobileMenuOpen ? (
-            <IoMdClose size={32} />
+            <IoMdClose size={30} />
           ) : (
-            <GiHamburgerMenu size={32} />
+            <GiHamburgerMenu size={30} />
           )}
         </button>
       </div>

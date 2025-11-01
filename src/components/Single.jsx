@@ -17,7 +17,7 @@ const Single = ({ item }) => {
     >
       <div className="w-full h-full max-w-7xl flex flex-col md:flex-row items-center gap-5 overflow-hidden">
         {/* Gambar */}
-        <div className="w-full md:w-1/2 h-64 md:h-[50%] lg:h-[40%] pt-10 lg:pt-32 lg:mr-10">
+        <div className="w-full md:w-1/2 h-64 md:h-[50%] lg:h-[40%] pt-8 lg:pt-32 lg:mr-10">
           <img
             src={item.img}
             alt="image"
@@ -31,7 +31,9 @@ const Single = ({ item }) => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-300">
               {item.title}
             </h2>
-            <h5 className="text-sm text-white">{item.tec}</h5>
+            <h5 className="text-xs md:text-sm xl:text-base text-white">
+              {item.tec}
+            </h5>
           </div>
 
           {/* Tombol GitHub */}

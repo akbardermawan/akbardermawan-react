@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const BackgroundIntro = () => {
   return (
-    <div className="relative w-full h-screen  bg-black/95 flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-screen  bg-white/5 flex items-center justify-center overflow-hidden">
       {/* Teks utama */}
       {/* PC */}
       <motion.h1
