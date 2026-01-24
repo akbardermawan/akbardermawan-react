@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router";
 import { FiDownload } from "react-icons/fi";
-import { FaArrowRight, FaTelegramPlane } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { IoPersonSharp } from "react-icons/io5";
+import { GoProjectRoadmap } from "react-icons/go";
 import DecryptedText from "./decrypted/DecryptedText";
 import RotatingText from "./rotatingtext/RotatingText";
 
@@ -46,35 +48,43 @@ const Intro = () => {
       <div className="w-full h-full inset-0 z-0 absolute ">
         <BackgroundIntro />
       </div>
+
       <div className="w-full h-full z-10 absolute ">
         <div className="w-full h-screen flex items-center">
           <div className="flex flex-col">
-            {/* Example 3: Animate ketika muncul di layar */}
             <div style={{ marginTop: "2rem" }}>
               <DecryptedText
                 text="AKBAR DERMAWAN MAHBUBILLAH"
                 animateOn="view"
                 revealDirection="center"
-                className="text-lg md:text-2xl text-gray-300 font-bold" // teks hasil ter-reveal
-                encryptedClassName="text-lg md:text-2xl text-gray-300" // teks scramble
+                className="text-lg md:text-2xl text-gray-300 font-bold"
+                encryptedClassName="text-lg md:text-2xl text-gray-300"
                 parentClassName="tracking-wider"
               />
             </div>
+
             <div ref={textRef}>
-              <div className="flex gap-4 md:gap-8 xl:gap-12">
-                <Link
-                  to={"/contact"}
-                  className="flex items-center gap-2 text-base xl:text-lg text-gray-400 hover:text-sky-600 transition duration-300 cursor-pointer"
-                >
-                  <span className="font-medium">Contact Me</span>
-                  <FaTelegramPlane size={20} />
-                </Link>
+              <div className="flex gap-5 md:gap-8 xl:gap-12 mb-7 md:hidden">
                 <Link
                   to={"/about"}
-                  className="flex items-center gap-2 text-base xl:text-lg text-gray-400 hover:text-sky-600 transition duration-300 transform hover:translate-x-1 cursor-pointer"
+                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 transform hover:translate-x-1 cursor-pointer"
                 >
-                  <span className="font-medium">Detail Profile</span>
-                  <FaArrowRight size={20} />
+                  <IoPersonSharp size={25} />
+                  <span className="font-3xl">Profile</span>
+                </Link>
+                <Link
+                  to={"/contact"}
+                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 cursor-pointer"
+                >
+                  <GoProjectRoadmap size={25} />
+                  <span className="font-medium">Project</span>
+                </Link>
+                <Link
+                  to={"/contact"}
+                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 cursor-pointer"
+                >
+                  <FaTelegramPlane size={25} />
+                  <span className="font-medium">Contact</span>
                 </Link>
               </div>
               <p className="text-4xl md:text-6xl xl:text-8xl text-white">

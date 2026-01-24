@@ -1,7 +1,6 @@
 import Navigation from "./components/layout/Navigation";
 
 import { Outlet, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 
 import LoadingScreen from "./components/layout/LoadingScreen";
 import { useEffect, useState } from "react";
@@ -14,6 +13,7 @@ function App() {
     const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
+
   return loading ? (
     <LoadingScreen />
   ) : (

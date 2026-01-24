@@ -1,5 +1,3 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-
 import { services } from "../constants/index";
 import ServiceCard from "../components/ServiceCard";
 import Experiences from "../components/Experiences";
@@ -20,11 +18,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const { scrollY } = useScroll();
+  useLayoutEffect(() => {
+    document.documentElement.style.overflowY = "auto";
+    document.body.style.overflowY = "auto";
 
-  // Saat scrollY > 500px, turunkan z-index agar tidak menutupi konten
-  const zIndex = useTransform(scrollY, [0, 500], [30, -10]);
-
+    return () => {
+      document.documentElement.style.overflowY = "";
+      document.body.style.overflowY = "";
+    };
+  }, []);
   // Efek animasi fade-in dari kiri saat scroll
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -44,7 +46,12 @@ const About = () => {
         });
       });
     });
-    return () => ctx.revert();
+    return () => {
+      ctx.revert(); // hapus animation
+      ScrollTrigger.getAll().forEach((t) => t.kill(true)); // kill total
+      ScrollTrigger.clearScrollMemory(); // ⬅️ yang bikin scroll "nyambung"
+      ScrollTrigger.refresh(); // reset full
+    };
   }, []);
 
   // Efek animasi zoom-in saat scroll
@@ -67,11 +74,14 @@ const About = () => {
         });
       });
     });
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full  overflow-x-hidden">
       <CanvasCursor />
       {/* Bagian Sticky Cover */}
 

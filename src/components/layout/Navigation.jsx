@@ -48,25 +48,41 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col justify-between h-full">
             <div className="hidden md:flex md:flex-col  items-center ">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={
-                    cn(
+              {navLinks.map((link) =>
+                link.href === "/contact" ? (
+                  <a
+                    key={link.href}
+                    href="/contact"
+                    className={cn(
                       "text-lg xl:text-xl rotate-270 font-medium transition-colors hover:text-sky-600 relative my-5 xl:my-6 py-3",
                       location.pathname === link.href
                         ? "text-sky-600 after:scale-x-100 font-extrabold"
                         : "text-gray-300 dark:text-gray-300 after:scale-x-0 font-extrabold",
                       "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-600",
                       "after:origin-left after:transition-transform after:duration-300",
-                      "hover:after:scale-x-100"
-                    ) // Add hover effect for the underline
-                  }
-                >
-                  {link.label}
-                </Link>
-              ))}
+                      "hover:after:scale-x-100",
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className={cn(
+                      "text-lg xl:text-xl rotate-270 font-medium transition-colors hover:text-sky-600 relative my-5 xl:my-6 py-3",
+                      location.pathname === link.href
+                        ? "text-sky-600 after:scale-x-100 font-extrabold"
+                        : "text-gray-300 dark:text-gray-300 after:scale-x-0 font-extrabold",
+                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-600",
+                      "after:origin-left after:transition-transform after:duration-300",
+                      "hover:after:scale-x-100",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ),
+              )}
             </div>
             <div className="pl-7 flex flex-col gap-4">
               <a
@@ -100,26 +116,42 @@ const Navbar = () => {
           "md:hidden fixed inset-0 z-40 backdrop-blur-2xl backdrop-saturate-150 bg-white/70 dark:bg-gray-900/70 transition-all duration-1000 ease-in-out",
           mobileMenuOpen
             ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
+            : "opacity-0 -translate-y-full pointer-events-none",
         )}
       >
         <div className="w-full h-[95%] flex flex-col justify-between">
           <div className="flex flex-col items-center space-y-4 py-20">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "px-4 py-2 rounded-lg text-lg font-medium transition-colors w-full text-center",
-                  location.pathname === link.href
-                    ? "bg-sky-100 text-gray-300 dark:bg-sky-900/40"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-200/60 dark:hover:bg-gray-800/80 hover:text-sky-500"
-                )}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.href === "/contact" ? (
+                <a
+                  key={link.href}
+                  href="/contact"
+                  className={cn(
+                    "px-4 py-2 rounded-lg text-lg font-medium transition-colors w-full text-center",
+                    location.pathname === link.href
+                      ? "bg-sky-100 text-gray-300 dark:bg-sky-900/40"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-200/60 dark:hover:bg-gray-800/80 hover:text-sky-500",
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={cn(
+                    "px-4 py-2 rounded-lg text-lg font-medium transition-colors w-full text-center",
+                    location.pathname === link.href
+                      ? "bg-sky-100 text-gray-300 dark:bg-sky-900/40"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-200/60 dark:hover:bg-gray-800/80 hover:text-sky-500",
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
           </div>
           <div className="pl-4 flex  gap-5">
             <a

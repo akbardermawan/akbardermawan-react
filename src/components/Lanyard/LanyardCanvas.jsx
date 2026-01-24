@@ -2,10 +2,17 @@ import { Canvas } from "@react-three/fiber";
 import Lanyard from "./Lanyard";
 import { useLocation } from "react-router-dom";
 import * as THREE from "three";
+import { useEffect } from "react";
 
 export default function LanyardCanvas() {
   const location = useLocation(); // gunakan pathname sebagai key
-
+  useEffect(() => {
+    return () => {
+      const r3fCanvas = document.querySelector("canvas[data-engine='three']");
+      const gl = r3fCanvas?.getContext("webgl");
+      gl?.getExtension("WEBGL_lose_context")?.loseContext();
+    };
+  }, []);
   return (
     <div className="relative z-0 w-full h-screen flex justify-center items-center">
       <Canvas

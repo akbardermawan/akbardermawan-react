@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaCodeBranch } from "react-icons/fa";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import { MdWebAsset } from "react-icons/md";
 
 const Single = ({ item }) => {
   const ref = useRef(null);
@@ -45,24 +47,72 @@ const Single = ({ item }) => {
               after:transition-transform after:duration-300 
               hover:after:scale-x-100"
           >
-            <a
-              href={item.code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2  py-1 text-white transition-colors duration-300 hover:text-sky-400"
-            >
-              <FaCodeBranch className="text-xl text-white" />
-              <span className="text-white">Explore the Code</span>
-            </a>
+            {item.youtube ? (
+              <a
+                href={item.youtube}
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <YouTubeIcon className="text-2xl" />
+                <span>See Demo</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
+            {item.web ? (
+              <a
+                href="#"
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+              >
+                <MdWebAsset className="text-2xl" />
+                <span>Visit Web</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
           </div>
 
           <p className="text-sky-300 text-sm md:text-base mt-1">{item.desc}</p>
           <div>
-            <a href={item.url}>
-              <button className="bg-sky-700 text-white rounded-2xl py-2 px-6 w-full md:w-48 transition hover:bg-sky-400 hover:text-black mt-10 m-1">
-                See Demo
-              </button>
-            </a>
+            {item.code ? (
+              <a
+                href={item.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2  py-1 text-white transition-colors duration-300 hover:text-sky-400"
+              >
+                <FaCodeBranch className="text-xl text-white" />
+                <span className="text-white">Explore the Code</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
+            {item.backend ? (
+              <a
+                href={item.backend}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2  py-1 text-white transition-colors duration-300 hover:text-sky-400"
+              >
+                <FaCodeBranch className="text-xl text-white" />
+                <span className="text-white">Backend Code</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
+            {item.frontend ? (
+              <a
+                href={item.frontend}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2  py-1 text-white transition-colors duration-300 hover:text-sky-400"
+              >
+                <span className="text-white">Frontend Code</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
           </div>
         </motion.div>
       </div>

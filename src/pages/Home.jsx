@@ -1,16 +1,12 @@
 import Footer from "../components/Footer";
-import ContactHome from "../components/home/ContactHome";
 import Intro from "../components/home/Intro";
-import Project from "../components/home/Project";
 
 // import { ComputersCanvas } from "../components/canvas";
 
 const Home = () => {
   return (
-    <div className="w-full overflow-hidden bg-black relative">
+    <div className="w-full overflow-x-hidden relative bg-black/95">
       <Intro />
-      <Project />
-      <ContactHome />
       <Footer />
     </div>
   );
