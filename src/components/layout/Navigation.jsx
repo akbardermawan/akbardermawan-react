@@ -14,7 +14,6 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
     { href: "/projects", label: "Projects" },
     { href: "/contact", label: "Contact" },
   ];
@@ -54,11 +53,11 @@ const Navbar = () => {
                     key={link.href}
                     href="/contact"
                     className={cn(
-                      "text-lg xl:text-xl rotate-270 font-medium transition-colors hover:text-sky-600 relative my-5 xl:my-6 py-3",
+                      "text-xl xl:text-2xl rotate-270 font-bold transition-colors hover:text-sky-400 relative my-10 xl:my-11 py-3",
                       location.pathname === link.href
-                        ? "text-sky-600 after:scale-x-100 font-extrabold"
+                        ? "text-sky-400 after:scale-x-100 font-extrabold"
                         : "text-gray-300 dark:text-gray-300 after:scale-x-0 font-extrabold",
-                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-600",
+                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-400",
                       "after:origin-left after:transition-transform after:duration-300",
                       "hover:after:scale-x-100",
                     )}
@@ -70,11 +69,11 @@ const Navbar = () => {
                     key={link.href}
                     to={link.href}
                     className={cn(
-                      "text-lg xl:text-xl rotate-270 font-medium transition-colors hover:text-sky-600 relative my-5 xl:my-6 py-3",
+                      "text-xl xl:text-2xl rotate-270 font-bold transition-colors hover:text-sky-400 relative my-10 xl:my-11 py-3",
                       location.pathname === link.href
-                        ? "text-sky-600 after:scale-x-100 font-extrabold"
+                        ? "text-sky-400 after:scale-x-100 font-extrabold"
                         : "text-gray-300 dark:text-gray-300 after:scale-x-0 font-extrabold",
-                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-600",
+                      "after:absolute after:bottom-[-1px] after:-left-0 after:top-6 after:w-full after:h-[4px] after:bg-sky-400",
                       "after:origin-left after:transition-transform after:duration-300",
                       "hover:after:scale-x-100",
                     )}
@@ -127,7 +126,7 @@ const Navbar = () => {
                   key={link.href}
                   href="/contact"
                   className={cn(
-                    "px-4 py-2 rounded-lg text-lg font-medium transition-colors w-full text-center",
+                    "px-4 py-2 rounded-lg text-2xl font-bold transition-colors w-full text-center",
                     location.pathname === link.href
                       ? "bg-sky-100 text-gray-300 dark:bg-sky-900/40"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-200/60 dark:hover:bg-gray-800/80 hover:text-sky-500",
@@ -141,7 +140,7 @@ const Navbar = () => {
                   key={link.href}
                   to={link.href}
                   className={cn(
-                    "px-4 py-2 rounded-lg text-lg font-medium transition-colors w-full text-center",
+                    "px-4 py-2 rounded-lg text-2xl font-bold transition-colors w-full text-center",
                     location.pathname === link.href
                       ? "bg-sky-100 text-gray-300 dark:bg-sky-900/40"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-200/60 dark:hover:bg-gray-800/80 hover:text-sky-500",

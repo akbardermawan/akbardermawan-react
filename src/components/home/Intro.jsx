@@ -39,7 +39,7 @@ const Intro = () => {
             start: "top 80%", // mulai animasi saat elemen 80% terlihat di viewport
             toggleActions: "play none none reverse", // animasi balik saat scroll ke atas
           },
-        }
+        },
       );
     }
   }, []);
@@ -64,29 +64,6 @@ const Intro = () => {
             </div>
 
             <div ref={textRef}>
-              <div className="flex gap-5 md:gap-8 xl:gap-12 mb-7 md:hidden">
-                <Link
-                  to={"/about"}
-                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 transform hover:translate-x-1 cursor-pointer"
-                >
-                  <IoPersonSharp size={25} />
-                  <span className="font-3xl">Profile</span>
-                </Link>
-                <Link
-                  to={"/contact"}
-                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 cursor-pointer"
-                >
-                  <GoProjectRoadmap size={25} />
-                  <span className="font-medium">Project</span>
-                </Link>
-                <Link
-                  to={"/contact"}
-                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 cursor-pointer"
-                >
-                  <FaTelegramPlane size={25} />
-                  <span className="font-medium">Contact</span>
-                </Link>
-              </div>
               <p className="text-4xl md:text-6xl xl:text-8xl text-white">
                 Web Developer
               </p>
@@ -104,25 +81,21 @@ const Intro = () => {
                   rotationInterval={2000}
                 />
               </h2>
-              <div className="flex gap-4 ">
-                <div className="flex mt-3">
-                  <a
-                    href="/files/CV_Akbar.pdf"
-                    download
-                    aria-label="Download Resume"
-                  >
-                    <motion.button
-                      whileHover={{ backgroundColor: "#0ea5e9" }} // Tailwind sky-600
-                      transition={{ duration: 0.3 }}
-                      className="flex w-[160px] lg:w-[180px] h-[25px] lg:h-[30px] rounded-full pl-2 lg:pl-4 py-2 border-2 border-sky-500 justify-between items-center text-black hover:text-white"
-                    >
-                      <span className="text-lg text-white">Download CV</span>
-                      <div className="w-[25px] lg:w-[30px] h-[25px] lg:h-[30px] rounded-full bg-sky-400 flex justify-center items-center">
-                        <FiDownload className="" />
-                      </div>
-                    </motion.button>
-                  </a>
-                </div>
+              <div className="flex gap-5 md:gap-8 xl:gap-12 mb-7 md:hidden pt-5">
+                <Link
+                  to={"/projects"}
+                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 cursor-pointer"
+                >
+                  <GoProjectRoadmap size={25} />
+                  <span className="font-medium">My Projects</span>
+                </Link>
+                <Link
+                  to={"/contact"}
+                  className="flex items-center gap-2 text-xl  text-white hover:text-sky-600 transition duration-300 cursor-pointer"
+                >
+                  <FaTelegramPlane size={25} />
+                  <span className="font-medium">Contact</span>
+                </Link>
               </div>
             </div>
           </div>

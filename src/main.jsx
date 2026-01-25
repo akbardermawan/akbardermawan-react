@@ -10,8 +10,7 @@ import { Route, RouterProvider, createRoutesFromElements } from "react-router";
 import { createBrowserRouter } from "react-router";
 
 // 🚀 Lazy load pages
-const Home = lazy(() => import("./pages/Home.jsx"));
-const About = lazy(() => import("./pages/About.jsx"));
+const Home = lazy(() => import("./pages/About.jsx"));
 const Portfolio = lazy(() => import("./pages/Portfolio.jsx"));
 
 import Contact from "./pages/Contact.jsx";
@@ -24,14 +23,6 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<div>Loading...</div>}>
             <Home />
-          </Suspense>
-        }
-      />
-      <Route
-        path="/about"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <About />
           </Suspense>
         }
       />

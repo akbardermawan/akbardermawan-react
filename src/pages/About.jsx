@@ -11,9 +11,14 @@ import CanvasCursor from "../components/CanvasCursor";
 import FlowChart from "../components/FlowChart";
 import PhotoAbout from "../components/PhotoAbout";
 
+import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
+
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Intro from "../components/home/Intro";
+import PixelTransition from "../components/home/PixelTransition";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,17 +89,48 @@ const About = () => {
     <div className="relative w-full  overflow-x-hidden">
       <CanvasCursor />
       {/* Bagian Sticky Cover */}
+      <div className="bg-black">
+        <Intro />
+      </div>
 
       <div className="flex-row justify-center items-center text-[#0a1a2f] bg-black/95">
         <div className="relative h-[350px] md:h-[450px] w-full overflow-hidden">
-          <img
-            src="/about.jpg"
-            alt="about"
-            className="w-full h-full object-cover object-bottom"
+          <PixelTransition
+            firstContent={
+              <img
+                src="/about.jpg"
+                alt="about"
+                className="w-full h-full object-cover object-bottom  brightness-75"
+              />
+            }
+            secondContent={
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "grid",
+                  placeItems: "center",
+                  backgroundColor: "#000000F2",
+                }}
+              >
+                <p
+                  style={{
+                    fontWeight: 900,
+                    fontSize: "3.5rem",
+                    color: "#ffffff",
+                    padding: "5px",
+                  }}
+                >
+                  Hey, call me Akbar.
+                </p>
+              </div>
+            }
+            gridSize={10}
+            pixelColor="#000000"
+            once={false}
+            animationStepDuration={0.4}
+            className="w-full h-full"
           />
-
-          {/* overlay hitam semi-transparan */}
-          <div className="absolute inset-0 bg-black/70"></div>
 
           {/* teks dan efek hover */}
           <div
@@ -136,15 +172,29 @@ const About = () => {
                 Agricultural Engineering from the University of Jember,
                 Indonesia. Although my career path slightly deviates from my
                 academic background, I chose to focus on enhancing my
-                programming skills, particularly in web development. Check out
-                <a href="https://github.com/akbardermawan">
-                  <span className="text-gray-600 underline decoration-gray-400 decoration-2">
-                    {" "}
-                    My Github
-                  </span>
-                </a>
-                .
+                programming skills, particularly in web development.
               </p>
+
+              <div className="flex gap-4">
+                <div className="flex mt-3">
+                  <a
+                    href="/files/CV_Akbar.pdf"
+                    download
+                    aria-label="Download Resume"
+                  >
+                    <motion.button
+                      whileHover={{ backgroundColor: "#0ea5e9" }} // Tailwind sky-600
+                      transition={{ duration: 0.3 }}
+                      className="flex w-[160px] lg:w-[180px] h-[25px] lg:h-[30px] rounded-full pl-2 lg:pl-4 py-2 border-2 border-sky-500 justify-between items-center text-black hover:text-white"
+                    >
+                      <span className="text-lg text-white">Download CV</span>
+                      <div className="w-[25px] lg:w-[30px] h-[25px] lg:h-[30px] rounded-full bg-sky-400 flex justify-center items-center">
+                        <FiDownload className="" />
+                      </div>
+                    </motion.button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
