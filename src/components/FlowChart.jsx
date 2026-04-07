@@ -50,20 +50,6 @@ const FlowChart = () => {
   const containerRef = useRef(null);
   const lineRefs = useRef([]);
   const [currentImage, setCurrentImage] = useState(timelineData[0].image);
-  const [prevImage, setPrevImage] = useState(null);
-  const [isFading, setIsFading] = useState(false);
-
-  const changeImage = (newImage) => {
-    if (newImage === currentImage) return;
-    setPrevImage(currentImage);
-    setCurrentImage(newImage);
-    setIsFading(true);
-
-    setTimeout(() => {
-      setPrevImage(null);
-      setIsFading(false);
-    }, 700); // sesuai durasi CSS
-  };
 
   useEffect(() => {
     const items = containerRef.current.querySelectorAll(".timeline-item");
@@ -94,11 +80,9 @@ const FlowChart = () => {
             scrollTrigger: {
               trigger: el,
               start: "top center",
-              onEnter: () => changeImage(timelineData[idx].image),
-              onEnterBack: () => changeImage(timelineData[idx].image),
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
 
         if (line) {
@@ -115,7 +99,7 @@ const FlowChart = () => {
                 start: "top 80%",
                 toggleActions: "restart reverse restart reverse",
               },
-            }
+            },
           );
         }
       }
@@ -123,35 +107,21 @@ const FlowChart = () => {
   }, []);
 
   return (
-    <section id="story" className="relative py-20 md:pb-32" ref={containerRef}>
+    <section id="story" className="relative py-15 md:pb-32" ref={containerRef}>
       {/* Background fade transition */}
       <div className="absolute inset-0 z-0">
-        {prevImage && (
-          <img
-            src={prevImage}
-            alt="Previous Background"
-            className="w-full h-full object-cover absolute inset-0 transition-opacity duration-700 opacity-0"
-          />
-        )}
-        <img
-          src={currentImage}
-          alt="Current Background"
-          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-700 ${
-            isFading ? "opacity-100" : "opacity-100"
-          }`}
-        />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-transparent" />
       </div>
 
       {/* Konten timeline */}
-      <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 relative z-10">
-        <div className="max-w-4xl mx-auto px-4 text-center" />
+      <div className="max-w-7xl w-full px-6 lg:px-10 mx-auto mb-5 relative z-10">
+        <div className="max-w-4xl mx-auto px-2 text-center" />
         <div className="relative mt-1 md:mt-5 px-2 md:px-10">
           <ul className="space-y-16">
             {timelineData.map((item, idx) => (
               <li
                 key={idx}
-                className={`timeline-item relative flex flex-col md:flex-row md:mb-50 ${
+                className={`timeline-item relative flex flex-col md:flex-row md:mb-50 md:items-start ${
                   idx % 2 !== 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
@@ -168,14 +138,33 @@ const FlowChart = () => {
 
                 {/* Garis horizontal */}
                 <div
-                  className={`hidden md:block absolute top-1/2 w-8 h-1 bg-gray-300 left-1/2 transform -translate-y-1/2 ${
+                  className={`hidden md:block absolute top-1/2 w-10 lg:w-14 h-1 bg-gray-300 left-1/2 transform -translate-y-1/2 ${
                     idx % 2 === 0 ? "" : "-translate-x-full"
                   }`}
                 />
 
                 {/* Box konten */}
                 <div
-                  className={`bg-white border border-gray-300 p-6 rounded-lg shadow-lg w-full md:w-2/5 mt-4 md:mt-6 md:mb-12 z-10 ${
+                  className={`hidden md:flex md:flex-col bg-white border border-gray-300 p-1 rounded-lg shadow-lg w-full md:w-1/2 md:min-h-[350px] lg:min-h-[450px] mt-4 md:mt-6 md:mb-12 z-10 transform md:translate-y-12 lg:translate-y-12 ${
+                    idx % 2 !== 0
+                      ? " md:mr-auto md:ml-30 lg:ml-50"
+                      : " md:ml-auto md:mr-30 lg:mr-50"
+                  }`}
+                >
+                  <div className="w-full md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-blue-800 text-center mt-1">
+                    {item.company}
+                  </h3>
+                </div>
+
+                <div
+                  className={`bg-white border border-gray-300 p-6 rounded-lg shadow-lg w-full md:w-2/5 mt-4 md:mt-6 md:mb-12 z-10 transform md:translate-y-6 lg:translate-y-18  ${
                     idx % 2 !== 0 ? "md:mr-auto" : "md:ml-auto"
                   }`}
                 >

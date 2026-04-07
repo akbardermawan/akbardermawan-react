@@ -240,10 +240,11 @@ const About = () => {
         </div>
 
         {/* Introduction vidio  */}
-        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 mt-5 md:mt-10 lg:mt-20 zoom-in ">
+        <div className="max-w-7xl w-full px-8 lg:px-12 mx-auto mb-5 mt-5 md:mt-20 lg:mt-30 zoom-in ">
           <IntroductionVidio />
         </div>
-        <div className="zoom-in max-w-7xl mx-auto mt-17 mb-15 lg:mb-20  px-8 ">
+        {/* Quotes */}
+        <div className="zoom-in max-w-7xl mx-auto mt-17 mb-15 lg:mb-20  px-8 md:mt-10 lg:mt-20 md:pt-5">
           <div
             className="relative inline-block 
             after:content-[''] after:absolute after:left-0 after:bottom-0 
